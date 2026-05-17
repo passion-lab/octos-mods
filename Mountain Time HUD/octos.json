@@ -1,0 +1,11 @@
+{
+    "name": "Mountain Time HUD",
+    "description": "View current date and time behind the peak of a mountain with a HUD holographic display showing the progress.",
+    "version": "1.0.0",
+    "entry": "index.html",
+    "image": "image.png",
+    "preview": "image.png",
+    "author": "Passion-Lab",
+    "authorsite": "https://github.com/Passion-Lab",
+    "source": "https://github.com/Passion-Lab/octos-mods"
+}
