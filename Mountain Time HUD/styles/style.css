@@ -348,8 +348,8 @@ div.progress-circulars .row {
 }
 
 .progress-container svg path.progress {
-    /* stroke: #ffffff; */
-    stroke: url(#gradient);
+    stroke: #ffffff;
+    /* stroke: url(#gradient); */
 
     /*
         Total length of semicircle radius = 90
