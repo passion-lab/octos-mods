@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Time HUD</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- Fullscreen background -->
+    <div id="background">
+
+        <!-- Content area -->
+        <div class="content">
+            <div class="centre">
+
+                <!-- Descriptive text based on the time of day -->
+                <div id="status">It's afternoon</div>
+
+                <!-- Time -->
+                <div id="time">
+                    <span id="hh">00</span><span id="mm">00</span>
+                </div>
+
+                <!-- Date -->
+                <div id="date">
+                    <span id="dd">00</span><sup id="sf">th</sup><span id="month">---</span>
+                </div>
+
+                <!-- HUD Glass Display -->
+                <div class="glass" id="glass">
+                    <span class="border"></span>
+
+                    <!-- Glass content -->
+                    <div class="glass-content">
+
+                        <!-- TOP - Heading -->
+                        <div class="heading">
+                            <h6>live update</h6><span></span>
+                        </div>
+
+                        <div class="body">
+
+                            <!-- LEFT - Day Progess -->
+                            <div class="progress-bar">
+                                <span class="bar" id="dayProgress"></span><span class="value-text" id="dayProgressValue">00%</span>today
+                            </div>
+
+                            <!-- RIGHT - Month & Year Progress -->
+                            <div class="progress-circulars">
+
+                                <!-- UP - Month Progress -->
+                                <div class="row">
+                                    <div class="progress-container" id="monthProgress" style="--value: 00;">
+                                        <!-- Semi-circular progress bar -->
+                                        <svg viewBox="0 0 220 120">
+                                            <defs>
+                                                <linearGradient id="gradient" x1="0" x2="0" y1="1" y2="0">
+                                                    <stop offset="30%" stop-opacity="0.3" stop-color="white" />
+                                                    <stop offset="100%" stop-opacity="1" stop-color="white" />
+                                                </linearGradient>
+                                            </defs>
+                                            <!-- Background Arc -->
+                                            <path class="background" d="M20 100 A90 90 0 0 1 200 100" />
+                                            <!-- Progress Arc -->
+                                            <path class="progress" d="M20 100 A90 90 0 0 1 200 100" />
+                                        </svg>
+
+                                        <!-- Label text -->
+                                        <div class="text">
+                                            <div class="value-text" id="monthProgressValue">00%</div>
+                                            <div class="sub-text" id="monthProgressText">of ---</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- DOWN - Year Progress -->
+                                <div class="row">
+                                    <div class="progress-container" id="yearProgress" style="--value: 00;">
+                                        <!-- Semi-circular progress bar -->
+                                        <svg viewBox="0 0 220 120">
+                                            <!-- Background Arc -->
+                                            <path class="background" d="M20 100 A90 90 0 0 1 200 100" />
+                                            <!-- Progress Arc -->
+                                            <path class="progress" d="M20 100 A90 90 0 0 1 200 100" />
+                                        </svg>
+
+                                        <!-- Label text -->
+                                        <div class="text">
+                                            <div class="value-text" id="yearProgressValue">00%</div>
+                                            <div class="sub-text" id="yearProgressText">of ----</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background layer -->
+        <div class="bg-layer"></div>
+        
+    </div>
+
+    <!-- Main JavaScript file -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
